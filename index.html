@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nadiel Market | Joki Mobile Legends Terpercaya</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fffaf5;
+            color: #2c2c2c;
+            scroll-behavior: smooth;
+        }
+
+        /* Warna Orange & Putih dominan */
+        :root {
+            --orange-primary: #f97316;
+            --orange-deep: #ea580c;
+            --orange-light: #ffedd5;
+            --white: #ffffff;
+            --gray-light: #fef9f0;
+            --gray-text: #4b5563;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 2px solid var(--orange-light);
+        }
+        .logo h2 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--orange-primary);
+        }
+        .logo span {
+            color: #2c2c2c;
+            font-weight: 600;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #3a3a3a;
+            transition: 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--orange-primary);
+        }
+        .btn-orange {
+            background: var(--orange-primary);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(249,115,22,0.3);
+        }
+        .btn-orange:hover {
+            background: var(--orange-deep);
+            transform: translateY(-2px);
+        }
+        .btn-outline-orange {
+            border: 2px solid var(--orange-primary);
+            background: transparent;
+            color: var(--orange-primary);
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .btn-outline-orange:hover {
+            background: var(--orange-primary);
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            padding: 60px 0 40px;
+        }
+        .hero-content {
+            flex: 1.2;
+        }
+        .hero-badge {
+            background: var(--orange-light);
+            color: var(--orange-primary);
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 3.3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero h1 span {
+            color: var(--orange-primary);
+        }
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--gray-text);
+            margin-bottom: 28px;
+            max-width: 500px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 30px;
+        }
+        .stat {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid #ffe0c4;
+        }
+        .stat h3 {
+            font-size: 1.8rem;
+            color: var(--orange-primary);
+        }
+        .hero-image {
+            flex: 0.8;
+            background: linear-gradient(145deg, #fff1e6, #fff);
+            border-radius: 50px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #ffdec2;
+        }
+        .hero-image i {
+            font-size: 7rem;
+            color: var(--orange-primary);
+        }
+
+        /* Layanan / Paket Joki */
+        .section {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .section-sub {
+            text-align: center;
+            color: var(--gray-text);
+            margin-bottom: 50px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 32px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 12px 24px -8px rgba(0,0,0,0.05);
+            border: 1px solid #ffe0cc;
+            transition: transform 0.2s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange-primary);
+        }
+        .service-icon {
+            font-size: 2.8rem;
+            color: var(--orange-primary);
+            margin-bottom: 20px;
+        }
+        .price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--orange-primary);
+            margin: 16px 0;
+        }
+        .btn-small {
+            background: var(--orange-light);
+            color: var(--orange-deep);
+            padding: 10px 20px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        /* Portfolio / Prestasi */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .porto-item {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            border: 1px solid #ffdec2;
+        }
+        .porto-img {
+            background: var(--orange-light);
+            padding: 30px 0;
+            text-align: center;
+            font-size: 3rem;
+            color: var(--orange-primary);
+        }
+        .porto-info {
+            padding: 20px;
+        }
+
+        /* Testimonial & Rating */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 20px;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 28px;
+            padding: 28px;
+            border: 1px solid #ffe0cc;
+            transition: all 0.2s;
+        }
+        .rating {
+            color: #fbbf24;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        .customer-name {
+            font-weight: 700;
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .avg-rating {
+            background: var(--orange-light);
+            border-radius: 40px;
+            padding: 6px 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        /* Kontak + CTA */
+        .contact-area {
+            background: linear-gradient(135deg, #fff5ea, #fff);
+            border-radius: 56px;
+            padding: 48px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ffd6b3;
+        }
+        .contact-info h3 {
+            font-size: 1.9rem;
+            margin-bottom: 12px;
+        }
+        .contact-list {
+            margin: 20px 0;
+        }
+        .contact-list p {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer {
+            background: #2c2c2c;
+            color: #ddd;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        @media (max-width: 850px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero p { margin-left: auto; margin-right: auto; }
+            .hero-stats { justify-content: center; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .navbar { flex-direction: column; }
+            .contact-area { flex-direction: column; text-align: center; }
+        }
+        .text-orange { color: var(--orange-primary); }
+        .bg-soft-orange { background: var(--orange-light); }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h2>NADIEL <span>Market</span></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#ulasan">Ulasan</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <a href="#kontak" class="btn-orange"><i class="fab fa-whatsapp"></i> Order Sekarang</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <div class="container" id="home">
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge"><i class="fas fa-trophy"></i> Top Rated Joki MLBB</div>
+                    <h1>Naikkan Rankmu Bersama <span>Nadiel Market</span></h1>
+                    <p>Joki Mobile Legends profesional, aman, cepat, dan harga bersahabat. Dipercaya 500+ pelanggan dengan rating ★ 4.9/5.</p>
+                    <div class="hero-stats">
+                        <div class="stat"><h3>500+</h3><p>Pelanggan Puas</p></div>
+                        <div class="stat"><h3>1500+</h3><p>Match Dimainkan</p></div>
+                        <div class="stat"><h3>98%</h3><p>Win Rate</p></div>
+                    </div>
+                    <div style="margin-top: 28px;">
+                        <a href="#kontak" class="btn-orange" style="padding: 12px 32px;"><i class="fab fa-whatsapp"></i> Konsultasi Gratis</a>
+                        <a href="#ulasan" class="btn-outline-orange" style="margin-left: 16px;"><i class="fas fa-star"></i> Lihat Testimoni</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-gamepad"></i>
+                    <p style="margin-top: 20px; font-weight: bold;">Mobile Legends<br>Boosting Service</p>
+                    <div class="avg-rating" style="background: #ffe0cc; margin-top: 15px;"><i class="fas fa-star" style="color:#f97316;"></i> 4.9 / 5 (Rating Tertinggi)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layanan Joki (Paket) -->
+        <section id="layanan" class="section container">
+            <h2 class="section-title">Layanan <span class="text-orange">Joki Mobile Legends</span></h2>
+            <div class="section-sub">Pilih paket sesuai kebutuhan rank-mu, joki aman & anti banned!</div>
+            <div class="card-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-star"></i></div>
+                    <h3>Rank Push (Star)</h3>
+                    <p>Naikkan bintang dari Warrior sampai Legend</p>
+                    <div class="price">Mulai 15K / Star</div>
+                    <a href="#kontak" class="btn-small">Pesan Sekarang →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Mythic Glory Boost</h3>
+                    <p>Khusus Mythic ke Glory Immortal, winrate tinggi</p>
+                    <div class="price">Mulai 350K / Tier</div>
+                    <a href="#kontak" class="btn-small">Info Lebih</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>MMR Hero / Top Global</h3>
+                    <p>Naikkan peringkat hero favoritmu hingga Top Global</p>
+                    <div class="price">Custom Harga</div>
+                    <a href="#kontak" class="btn-small">Konsultasi</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tasks"></i></div>
+                    <h3>Misi & Battle Pass</h3>
+                    <p>Rampungkan semua task mingguan / season</p>
+                    <div class="price">Mulai 50K / Minggu</div>
+                    <a href="#kontak" class="btn-small">Order</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portofolio / Prestasi (concept portofolio) -->
+        <section id="portofolio" class="section container">
+            <h2 class="section-title">Portofolio <span class="text-orange">Pencapaian Nadiel Market</span></h2>
+            <div class="section-sub">Beberapa hasil boosting & akun yang pernah kami bantu naikkan rank</div>
+            <div class="portfolio-grid">
+                <div class="porto-item">
+                    <div class="porto-img"><i class="fas fa-medal"></i></div>
+                    <div class="porto-info">
+                        <h3>Epical Abadi 1000+ pts</h3>
+                        <p>Client ID: R****G | Boost dari Epic V ke Grandmaster I dalam 1 hari.</p>
+                        <span class="text-orange">Winrate 8%</span>
+                    </div>
+                </div>
+                <div class="porto-item">
+                    <div class="porto-img"><i class="fas fa-trophy"></i></div>
+                    <div class="porto-info">
+                        <h3>Top Global Dyroth</h3>
+                        <p>MMR hero Gusion dari 2000 ke Top 1300 dalam 2 minggu.</p>
+                        <span class="text-orange">-700 MMR</span>
+                    </div>
+                </div>
+                <div class="porto-item">
+                    <div class="porto-img"><i class="fas fa-users"></i></div>
+                    <div class="porto-info">
+                        <h3>Squad Tournament Winner</h3>
+                        <p>Membawa tim client menjadi gugur di turnamen lokal MPL style.</p>
+                        <span class="text-orange">Hadiah 0 JT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ulasan Pelanggan dengan RATING & BINTANG (konsep ulasan lengkap)-->
+        <section id="ulasan" class="section container">
+            <h2 class="section-title">Apa Kata <span class="text-orange">Pelanggan Kami?</span></h2>
+            <div style="display: flex; justify-content: center; margin-bottom: 40px;">
+                <div class="avg-rating"><i class="fas fa-star" style="color:#f97316;"></i> <i class="fas fa-star" style="color:#f97316;"></i> <i class="fas fa-star" style="color:#f97316;"></i> <i class="fas fa-star" style="color:#f97316;"></i> <i class="fas fa-star-half-alt" style="color:#f97316;"></i> <strong style="margin-left: 8px;">4.9 / 5 dari 312 ulasan</strong></div>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"Proses cepat, akun aman, dan Nadiel Market sangat profesional. Rank saya naik dari Legend ke Epic hanya 3 hari! Recommended banget."</p>
+                    <div class="customer-name"><i class="fas fa-user-circle text-orange"></i> <strong>Andrean Putra</strong> <span style="color:#f97316;">★ 5.0</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"Pelayanan ramah, harga transparan. Saya pakai jasa MMR hero, hasilnya luar biasa. Top 100 Desa sekarang. Terima kasih Nadiel Market!"</p>
+                    <div class="customer-name"><i class="fas fa-user-circle text-orange"></i> <strong>Jessica M.</strong> <span style="color:#f97316;">★ 5.0</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★☆</div>
+                    <p>"Aman terpercaya, komunikasi via WhatsApp responsif. Satu bintang kurang karena agak lama di antrian weekend, tapi hasil memuaskan."</p>
+                    <div class="customer-name"><i class="fas fa-user-circle text-orange"></i> <strong>Rizal Kurniawan</strong> <span style="color:#f97316;">★ 4.5</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"Beneran joki aman tanpa password diminta? Iya, mereka pakai sistem invite aja. Rank naik drastis. Makasih Nadiel Market! Mantap jiwa."</p>
+                    <div class="customer-name"><i class="fas fa-user-circle text-orange"></i> <strong>Fikri H.</strong> <span style="color:#f97316;">★ 5.0</span></div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn-outline-orange"><i class="fab fa-google"></i> Lihat Semua 312 Ulasan</a>
+            </div>
+        </section>
+
+        <!-- Kontak + CTA -->
+        <section id="kontak" class="container section">
+            <div class="contact-area">
+                <div class="contact-info">
+                    <h3>Hubungi <span class="text-orange">Nadiel Market</span></h3>
+                    <p>Siap melayani 24/7 untuk kebutuhan joki Mobile Legends Anda.</p>
+                    <div class="contact-list">
+                        <p><i class="fab fa-whatsapp" style="color:#25D366; font-size: 1.4rem;"></i> +62 895 3854 89292 (Nadiel)</p>
+                        <p><i class="fas fa-envelope" style="color:#f97316;"></i> nadielcaesar@gmail.com</p>
+                        <p><i class="fab fa-discord" style="color:#5865F2;"></i> NadielMarket#8899</p>
+                    </div>
+                    <a href="https://wa.me/62895385489292?text=Halo%20Nadiel%20Market%2C%20saya%20mau%20order%20joki%20MLBB" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat via WhatsApp</a>
+                </div>
+                <div class="contact-info" style="text-align: right;">
+                    <h4><i class="fas fa-clock"></i> Jam Operasional</h4>
+                    <p>Setiap Hari: 08.00 - 23.59 WIB</p>
+                    <p>Response cepat rata-rata <strong class="text-orange">5 menit</strong></p>
+                    <div style="margin-top: 20px;"><i class="fas fa-shield-alt text-orange"></i> Garansi Uang Kembali jika tidak puas</div>
+                </div>
+            </div>
+            <!-- Form Kontak singkat opsional -->
+            <div style="margin-top: 50px; background: white; border-radius: 40px; padding: 32px; border: 1px solid #ffdec2;">
+                <h3 style="text-align: center; margin-bottom: 20px;">Atau kirim pesan langsung</h3>
+                <form id="contactForm" style="display: flex; flex-direction: column; gap: 18px; max-width: 600px; margin: 0 auto;">
+                    <input type="text" placeholder="Nama kamu" id="namaUser" style="padding: 14px 20px; border-radius: 60px; border: 1px solid #ffd6b3; background: white;">
+                    <input type="text" placeholder="ID Mobile Legends (opsional)" style="padding: 14px 20px; border-radius: 60px; border: 1px solid #ffd6b3;">
+                    <textarea rows="3" placeholder="Pesan / paket yang diinginkan..." id="pesanUser" style="padding: 14px 20px; border-radius: 28px; border: 1px solid #ffd6b3;"></textarea>
+                    <button type="submit" class="btn-orange" style="border: none; cursor: pointer; width: fit-content; margin: 0 auto;"><i class="fab fa-telegram"></i> Kirim ke Admin</button>
+                    <p id="formStatus" style="text-align: center; font-size: 0.85rem;"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="margin-bottom: 20px;">
+                <h2 style="color: #f97316;">NADIEL MARKET</h2>
+                <p style="margin-top: 12px;">Joki Mobile Legends terpercaya, aman dan cepat. Bergabung dengan ribuan pelanggan yang puas.</p>
+                <div style="margin: 20px 0;">
+                    <i class="fab fa-whatsapp" style="margin: 0 8px; font-size: 1.4rem;"></i>
+                    <i class="fab fa-instagram" style="margin: 0 8px; font-size: 1.4rem;"></i>
+                    <i class="fab fa-tiktok" style="margin: 0 8px; font-size: 1.4rem;"></i>
+                </div>
+            </div>
+            <hr style="border-color: #444;">
+            <p style="margin-top: 30px;">© 2025 Nadiel Market — All rights reserved. Mobile Legends® adalah trademark Moonton.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll untuk navigasi
+        document.querySelectorAll('.nav-links a, .btn-orange[href^="#"], .btn-outline-orange[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if(targetId && targetId !== '#' && targetId.startsWith('#')){
+                    e.preventDefault();
+                    const element = document.querySelector(targetId);
+                    if(element) element.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form kontak sederhana (simulasi)
+        const form = document.getElementById('contactForm');
+        if(form){
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                const nama = document.getElementById('namaUser')?.value.trim();
+                const pesan = document.getElementById('pesanUser')?.value.trim();
+                const status = document.getElementById('formStatus');
+                if(!nama || !pesan){
+                    status.innerHTML = '<span style="color:#f97316;">Harap isi nama dan pesan terlebih dahulu!</span>';
+                    setTimeout(()=> status.innerHTML = '', 3000);
+                    return;
+                }
+                status.innerHTML = '<span style="color:green;">✅ Pesan terkirim! Admin Nadiel Market akan segera menghubungi via WhatsApp.</span>';
+                form.reset();
+                setTimeout(()=> status.innerHTML = '', 5000);
+                // Bisa juga redirect ke wa me, tapi biar simpel
+            });
+        }
+    </script>
+</body>
+</html>
